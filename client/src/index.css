@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* create new blog form */
+.createEvent {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.createEvent label {
+  text-align: left;
+  display: block;
+}
+.createEvent h2 {
+  font-size: 20px;
+  color: #0456a9;
+  margin-bottom: 30px;
+}
+.createEvent input, .createEvent textarea, .createEvent select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.createEvent button {
+  background: #0456a9;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}

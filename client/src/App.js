@@ -2,30 +2,31 @@ import React, { useState, useEffect } from 'react'
 
 function App() {
 
-  const [data, setData] = useState([{}])
-
-  useEffect(() => {
-    fetch("/events").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, [])
+  const [eventName, setEventName] = useState('');
+  const [eventTimeStampe, setEventTimeStamp] = useState('');
+  const [eventDescription, setEventDescription] = useState('');
+  
 
   return (
-    <div>
-
-      {(typeof data.events === "undefined") ? (
-        <p>Loading...</p>
-      ) : (
-        data.events.map((member, i) => (
-          <p key={i}>{member}</p>
-        ))
-      )}
-
+    <div className="createEvent">
+      <h2>Enter a new Event</h2>
+      <form>
+        <label>Enter Event Name:</label>
+        <input
+          type="text"
+          required
+        />
+        <label>Enter Event Time Stamp</label>
+        <input
+          type="text"
+          required
+        />
+        <label>Enter Event Description</label>
+        <textarea
+          required  
+        ></textarea>
+        <button>Create Event</button>
+      </form>
     </div>
   )
 }
