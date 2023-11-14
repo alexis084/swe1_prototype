@@ -26,9 +26,7 @@ function App() {
     if (!eventData) {
       return null
     }
-
-    console.log("in display event data showing event name:", eventData.eventName)
-
+    
     return (
       <div>
         <h2>New Event:</h2>
